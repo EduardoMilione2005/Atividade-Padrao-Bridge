@@ -14,7 +14,6 @@ public class Main {
         System.out.println("     Padrão Bridge - Demonstração       ");
         System.out.println("========================================\n");
 
-        // --- Controle Básico com TV ---
         System.out.println(">>> Controle Básico + TV <<<");
         TV tv = new TV();
         ControleBasico controleTV = new ControleBasico(tv);
@@ -29,7 +28,6 @@ public class Main {
 
         System.out.println();
 
-        // --- Controle Avançado com Rádio ---
         System.out.println(">>> Controle Avançado + Rádio <<<");
         Radio radio = new Radio();
         ControleAvancado controleRadio = new ControleAvancado(radio);
@@ -40,7 +38,7 @@ public class Main {
         controleRadio.salvarCanalFavorito();
         controleRadio.silenciar();
         System.out.println("Está mudo? " + controleRadio.isMudo());
-        controleRadio.silenciar(); // desmutar
+        controleRadio.silenciar();
         controleRadio.getDispositivo().setCanal(100);
         controleRadio.irParaCanalFavorito();
         controleRadio.exibirStatus();
@@ -48,7 +46,6 @@ public class Main {
 
         System.out.println();
 
-        // --- Demonstração do Bridge: trocar dispositivo sem mudar o controle ---
         System.out.println(">>> Controle Avançado + TV (Bridge em ação) <<<");
         TV tv2 = new TV();
         ControleAvancado controleAvancadoTV = new ControleAvancado(tv2);
