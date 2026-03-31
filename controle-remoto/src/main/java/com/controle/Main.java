@@ -64,6 +64,4 @@ public class Main {
         System.out.println("========================================");
     }
 
-    // Método auxiliar para ControleAvancado acessar ajustarVolume
-    // (reutilizando ControleBasico inline)
 }
