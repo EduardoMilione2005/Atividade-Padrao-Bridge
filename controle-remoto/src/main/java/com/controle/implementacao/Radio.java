@@ -6,7 +6,7 @@ public class Radio implements Dispositivo {
 
     private boolean ligado = false;
     private int volume = 20;
-    private int canal = 87; // frequência FM em MHz
+    private int canal = 87; 
     private static final int VOLUME_MAX = 100;
     private static final int VOLUME_MIN = 0;
     private static final int FREQUENCIA_MIN = 87;
