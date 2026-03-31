@@ -4,7 +4,6 @@ import com.controle.dispositivo.Dispositivo;
 
 public abstract class ControleRemoto {
 
-    // Referência para o Implementor - núcleo do padrão Bridge
     protected Dispositivo dispositivo;
 
     public ControleRemoto(Dispositivo dispositivo) {
