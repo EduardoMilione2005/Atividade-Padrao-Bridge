@@ -2,35 +2,29 @@ package com.controle.implementacao;
 
 import com.controle.dispositivo.Dispositivo;
 
-/**
- * Implementação Concreta (ConcreteImplementor) do padrão Bridge.
- * Representa um rádio com suas características específicas.
- */
-public class Radio implements Dispositivo {
+public class TV implements Dispositivo {
 
-    private boolean ligado = false;
-    private int volume = 20;
-    private int canal = 87; // frequência FM em MHz
+    private boolean ligada = false;
+    private int volume = 30;
+    private int canal = 1;
     private static final int VOLUME_MAX = 100;
     private static final int VOLUME_MIN = 0;
-    private static final int FREQUENCIA_MIN = 87;
-    private static final int FREQUENCIA_MAX = 108;
 
     @Override
     public boolean isLigado() {
-        return ligado;
+        return ligada;
     }
 
     @Override
     public void ligar() {
-        ligado = true;
-        System.out.println("[Rádio] Ligando o rádio...");
+        ligada = true;
+        System.out.println("[TV] Ligando a televisão...");
     }
 
     @Override
     public void desligar() {
-        ligado = false;
-        System.out.println("[Rádio] Desligando o rádio...");
+        ligada = false;
+        System.out.println("[TV] Desligando a televisão...");
     }
 
     @Override
@@ -47,7 +41,7 @@ public class Radio implements Dispositivo {
         } else {
             this.volume = volume;
         }
-        System.out.println("[Rádio] Volume ajustado para: " + this.volume);
+        System.out.println("[TV] Volume ajustado para: " + this.volume);
     }
 
     @Override
@@ -57,17 +51,15 @@ public class Radio implements Dispositivo {
 
     @Override
     public void setCanal(int canal) {
-        if (canal >= FREQUENCIA_MIN && canal <= FREQUENCIA_MAX) {
+        if (canal >= 1) {
             this.canal = canal;
-            System.out.println("[Rádio] Frequência ajustada para: " + this.canal + " MHz");
-        } else {
-            System.out.println("[Rádio] Frequência inválida! Deve ser entre " + FREQUENCIA_MIN + " e " + FREQUENCIA_MAX + " MHz");
+            System.out.println("[TV] Canal alterado para: " + this.canal);
         }
     }
 
     @Override
     public String getStatus() {
-        return String.format("Rádio | Ligado: %s | Volume: %d | Frequência: %d MHz",
-                ligado, volume, canal);
+        return String.format("TV | Ligada: %s | Volume: %d | Canal: %d",
+                ligada, volume, canal);
     }
 }

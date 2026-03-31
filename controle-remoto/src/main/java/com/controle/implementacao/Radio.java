@@ -2,10 +2,7 @@ package com.controle.implementacao;
 
 import com.controle.dispositivo.Dispositivo;
 
-/**
- * Implementação Concreta (ConcreteImplementor) do padrão Bridge.
- * Representa um rádio com suas características específicas.
- */
+
 public class Radio implements Dispositivo {
 
     private boolean ligado = false;
