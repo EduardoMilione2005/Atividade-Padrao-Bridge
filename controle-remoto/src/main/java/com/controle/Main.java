@@ -5,10 +5,6 @@ import com.controle.controle.ControleBasico;
 import com.controle.implementacao.Radio;
 import com.controle.implementacao.TV;
 
-/**
- * Classe principal que demonstra o padrão Bridge em ação.
- * A abstração (controle) é separada da implementação (dispositivo).
- */
 public class Main {
 
     public static void main(String[] args) {

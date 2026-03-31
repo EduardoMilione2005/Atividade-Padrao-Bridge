@@ -2,7 +2,6 @@ package com.controle.implementacao;
 
 import com.controle.dispositivo.Dispositivo;
 
-
 public class Radio implements Dispositivo {
 
     private boolean ligado = false;
